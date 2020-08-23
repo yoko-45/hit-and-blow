@@ -210,7 +210,7 @@ numberHardButton.onclick = () => {
   // 答えを生成
   createNumber4();
 
-  // ヘッダーをNumberに変更
+  // ヘッダーをHardに変更
   const Header2 = document.createElement('h2');
   Header2.classList.add('title');
   Header2.innerText = 'Hard';
@@ -393,7 +393,7 @@ wordButton.onclick = () => {
   // 答えを生成
   createWord();
 
-  // ヘッダーをEasyに変更
+  // ヘッダーをWordに変更
   const Header2 = document.createElement('h2');
   Header2.classList.add('title');
   Header2.innerText = 'Word';
