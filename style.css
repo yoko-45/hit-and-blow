@@ -1,0 +1,255 @@
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3" sans-serif;
+  line-height: 1.7;
+  color: #333;
+  margin: 0;
+}
+#top {
+  background: linear-gradient(160deg, #f4f5f7 0%, #f4f5f7 80%, #fff500 80%, #fff500 100%);
+  min-height: 100vh;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #f4f5f7;
+}
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/* ナビゲーションエリア
+-------------------------- */
+#logo {
+  font-size: 20px;
+  font-family: cursive;
+}
+#nav {
+  justify-content: flex-end;
+  margin-top: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav-content {
+  margin-right: 20px;
+  padding: 5px;
+}
+.nav-content:hover {
+  border-radius: 5px;
+}
+#create-modal:hover {
+  border: 2px solid #333;
+}
+#giveup-anchor:hover {
+  border: 2px solid #e398c8;
+}
+#again-anchor:hover {
+  border: 2px solid #6ac3d4;
+}
+#top-anchor:hover {
+  border: 2px solid #e8df00;
+}
+
+/* モーダルウインドウ 
+---------------------- */
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  background-color: #f4f5f7;
+  margin: 50px;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #333;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: start;
+  max-width: 900px;
+  max-height: 600px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #333;
+  font-size: 1.5rem;
+  overflow: scroll;
+  animation: fadeInAnimation 200ms ease-out;
+}
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.inner > h2, .inner > h3 {
+  text-align: center;
+}
+
+/* HOME
+------------------------ */
+.top-content {
+  text-align: center;
+  margin-top: 30px;
+}
+.title {
+  font-size: 7rem;
+  font-family: cursive;
+  font-weight: normal;
+  margin: 20px 0 50px 0;
+  text-shadow: 2px 3px 5px #808080;
+}
+.top-content > p {
+  font-weight: normal;
+}
+
+/* ボタン 
+------------------------ */
+.game-mode {
+  font-size: 1.375rem;
+  border: none;
+  border-radius: 50%;
+  margin: 65px 40px;
+  padding: 36px 64px;
+  cursor: pointer;
+  outline: none;
+}
+.game-mode:hover {
+  transition: all 0.2s;
+  transform: translate(0, 4px);
+}
+#number-easy-mode {
+background-color: #fff500;
+box-shadow: 0 8px 0 #e8df00;
+}
+#number-easy-mode:hover {
+background-color: #e8df00;
+}
+#number-hard-mode {
+  background-color: #F2A5D6;
+  box-shadow: 0 8px 0 #e398c8;
+}
+#number-hard-mode:hover {
+  background-color: #e398c8;
+}
+#word-mode {
+  background-color: #75D5E7;
+  box-shadow: 0 8px 0 #6ac3d4;
+}
+#word-mode:hover {
+  background-color: #6ac3d4;
+}
+
+/* ゲームエリア
+---------------------- */
+#game-area {
+  display: flex;
+}
+.correct {
+  background: linear-gradient(transparent 70%, #F2A5D6 70%);
+  font-size: 2rem;
+}
+#game-textarea {
+  font-size: 200%;
+  text-align: center;
+  margin: 10px 40px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px gray;
+  overflow: scroll;
+  outline: none;
+}
+#game-input {
+  font-size: 100%;
+  border: 2px solid #75D5E7;
+  padding: 15px;
+  box-shadow: 0 3px 3px gray;
+  outline: none;
+}
+#decide-button {
+  font-size: 100%;
+  background-color: #75D5E7;
+  color: #333;
+  padding: 13px;
+  border: none;
+  border-bottom: 2px solid #75D5E7;
+  box-shadow: 3px 3px 3px gray;
+  cursor: pointer;
+  outline: none;
+}
+#decide-button:hover {
+  transition: all 0.3s;
+  background-color: #6ac3d4;
+}
+.guess {
+  margin: 10px;
+}
+
+.img-animation:hover {
+  animation: yurayura 3s ease infinite;
+}
+@keyframes yurayura {
+  0% { transform:translateX(0) }
+  15% { transform:translateX(-5px) }
+  30% { transform:translateX(5px) }
+  45% { transform:translateX(-5px) }
+  60% { transform:translateX(5px) }
+  75% { transform:translateX(-5px) }
+  90% { transform:translateX(5px) }
+  100% { transform:translateX(0) }
+}
+
+
+/* モバイルサイズ
+------------------------- */
+@media (max-width: 550px) {
+  .page-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .top-content {
+    margin-top: 20%;
+  }
+  .game-mode {
+    margin: 30px 20px;
+  }
+  #game-area {
+    flex-direction: column;
+    align-items: center;
+  }
+  #game-textarea {
+    font-size: 150%;
+    margin: auto;
+    padding: 5px;
+  }
+  #geme-input {
+    box-shadow: 0 0 0;
+  }
+  .guess {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    display: none;
+  }
+}
