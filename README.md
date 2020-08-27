@@ -1,4 +1,4 @@
-# hit-and-blow
+# Hit & Blow
 - 3,4桁の数字・3文字の英単語をHit&Blow(ヒント)を元に推理して当てるゲームです。
 
 ## :movie_camera: DEMO
