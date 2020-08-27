@@ -114,7 +114,7 @@ body {
   font-size: 7rem;
   font-family: cursive;
   font-weight: normal;
-  margin: 20px 0 50px 0;
+  margin: 20px 0 35px 0;
   text-shadow: 2px 3px 5px #808080;
 }
 .top-content > p {
@@ -166,6 +166,7 @@ background-color: #e8df00;
 .correct {
   background: linear-gradient(transparent 70%, #F2A5D6 70%);
   font-size: 2rem;
+  margin: 16px 0;
 }
 #game-textarea {
   font-size: 200%;
