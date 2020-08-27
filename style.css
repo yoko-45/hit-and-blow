@@ -224,6 +224,7 @@ background-color: #e8df00;
   .page-header {
     flex-direction: column;
     align-items: center;
+    box-shadow: 2px 0 5px gray;
   }
   .title {
     font-size: 2.5rem;
